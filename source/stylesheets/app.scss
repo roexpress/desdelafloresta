@@ -3,3 +3,8 @@
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
+
+.billboard img {
+  max-width: 100%;
+  max-height: 100%;
+}

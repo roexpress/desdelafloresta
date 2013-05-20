@@ -1,9 +1,26 @@
 ---
-title: Basic Template
+title: Desde La Floresta
 ---
 
-<div class="row">
-  <div class="large-12 columns">
-    <h2>Basic Template</h2>
+<!-- Orbit Container -->
+<div class="orbit-container">
+  <ul data-orbit="" class="orbit-slides-container" data-options="timer_speed:2500; bullets:false;">
+    <% data.billboards.each do |billboard| %>
+      <li class="billboard">
+        <img src="/images/<%= billboard.uid %>.jpg">
+        <div class="orbit-caption"><%= billboard.name %> - <%= billboard.place %></div>
+      </li>
+    <% end %>
+  </ul>
+
+  <!-- Slide Numbers -->
+  <div class="orbit-slide-number">
+    <span>1</span> of <span>3</span>
+  </div>
+
+  <!-- Timer and Play/Pause Button -->
+  <div class="orbit-timer">
+    <span></span>
+    <div class="orbit-progress" style="width: 100%; -webkit-transition: width 10s linear;"></div>
   </div>
 </div>
