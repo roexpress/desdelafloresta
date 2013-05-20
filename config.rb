@@ -1,3 +1,16 @@
+require 'zurb-foundation'
+preferred_syntax = :scss
+
+activate :livereload
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.user   = "root"
+  deploy.host   = "deploy.server.tld"
+  deploy.path   = "/usr/share/nginx/www"
+  deploy.clean  = true
+end
+
 ###
 # Compass
 ###
