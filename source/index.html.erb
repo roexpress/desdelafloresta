@@ -2,25 +2,34 @@
 title: Desde La Floresta
 ---
 
-<!-- Orbit Container -->
-<div class="orbit-container">
-  <ul data-orbit="" class="orbit-slides-container" data-options="timer_speed:2500; bullets:false;">
-    <% data.billboards.each do |billboard| %>
-      <li class="billboard">
-        <img src="/images/<%= billboard.uid %>.jpg">
-        <div class="orbit-caption"><%= billboard.name %> - <%= billboard.place %></div>
-      </li>
-    <% end %>
-  </ul>
-
-  <!-- Slide Numbers -->
-  <div class="orbit-slide-number">
-    <span>1</span> of <span>3</span>
+<div class="row">
+  <div class="large-3 columns">
+    <h2>Desde La Floresta</h2>
+    <p>
+      Somos profesionales en herrería artesanal y de obra.
+      Venimos al Perú desde Uruguay, a traer la artesanía tradicional de la familia De Azpitarte.
+      Hacemos barandas, rejas, estructuras metálicas, entre otros. Trabajamos todos los metales.
+    </p>
+    <h3>Pablo De Azpitarte &amp; Jorge Guarisco</h3>
+    <p>
+      <a href="mailto:pdeazpitarte@desdelafloresta.com">pdeazpitarte@desdelafloresta.com</a>
+      <br />
+      <a href="tel:956700291">956700291</a>
+    </p>
   </div>
-
-  <!-- Timer and Play/Pause Button -->
-  <div class="orbit-timer">
-    <span></span>
-    <div class="orbit-progress" style="width: 100%; -webkit-transition: width 10s linear;"></div>
+  <div class="large-9 columns">
+    <!-- Orbit Container -->
+    <div class="orbit-container">
+      <ul data-orbit="" class="orbit-slides-container" data-options="bullets:false;">
+        <% data.billboards.each do |billboard| %>
+          <li class="billboard" data-orbit-slide="<%= billboard.uid %>">
+            <img src="/images/<%= billboard.uid %>.jpg">
+            <div class="orbit-caption">
+              <strong><%= billboard.name %></strong> &mdash; <%= billboard.place %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
