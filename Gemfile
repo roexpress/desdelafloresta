@@ -5,3 +5,4 @@ gem 'middleman-deploy'
 gem 'middleman-livereload'
 
 gem 'zurb-foundation'
+gem 'json'
