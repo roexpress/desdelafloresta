@@ -4,6 +4,9 @@
 - uid: stand_nintendo
   name: Stand Nintendo
   place: Bulevar Asia, Lima, Perú
+- uid: reposador_de_aluminio
+  name: Reposador de Aluminio
+  place: Colonia, Uruguay
 - uid: techo_telescopico_colonia
   name: Techo Telescópico
   place: Colonia, Uruguay
